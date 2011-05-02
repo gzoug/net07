@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<exercise-configuration>
+	<!-- file name's root is the top level folder in jar  -->
+    <file name="data/sample-distribution.enc" subname="org/exadmin/data/sample-ids.xml" start="20080317 000000" end="20180406 235959" encoded="yes"/> 
+
+    <submission>
+        <file-writer path="." /> 
+        <!-- <url-writer uri="http://somehost/ws/lectures/net07/cgi-bin/submit" /> -->
+    </submission>
+</exercise-configuration>

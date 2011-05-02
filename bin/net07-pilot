@@ -1,0 +1,11 @@
+#!/bin/bash
+
+UserID=`whoami`
+TouchCan=/home/gzoug/net07
+echo "-------------------------------------------------"
+echo "Welcome to Online Exercise system (networks-2007)"
+echo "You are user $UserID"
+touch $TouchCan/$UserID
+curl http://somehost.org/dmst-net/index.php?uid=$UserID
+echo "You are now registered with the system."
+echo "Done!"

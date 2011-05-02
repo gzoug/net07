@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+This is a sample of submited answers 
+-->
+<results exercise-id="1" received="20070420 180253" student="AM8050123" full-name="Demo Student">
+	<answer question-id="16eb64dad668e67754b3c8473559ee89" answer-id="e6eb176e8a952d6a04984c0445221049" />
+	<answer question-id="c1d5e3624c8efc5b15f8414fcf23bcfd" answer-id="9ea8cecc0b0842ece2af6dd79e0e3d77" />
+	<answer question-id="232ef0614bee5d411d476cc3d5388ed1" answer-id="2bac84fcbbd5b44eef5d4dd41fb74a6e" />
+	<answer question-id="5d66e358834e8e7b499e0e5c6f5b85b8" answer-id="5ca95dd057a6e0913845969fda9c39c4" />
+
+</results>

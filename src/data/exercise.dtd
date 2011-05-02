@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+
+<!ELEMENT exercise (description?,question+)>
+<!ATTLIST exercise
+    mchoice CDATA #REQUIRED
+    version CDATA #REQUIRED
+    id CDATA #REQUIRED
+  >
+
+<!ELEMENT description (#PCDATA)>
+
+<!ELEMENT question (text,answer+)>
+<!ATTLIST question
+   id CDATA #IMPLIED
+   active CDATA #IMPLIED 
+   difficulty CDATA #IMPLIED
+   grade CDATA #IMPLIED
+ >
+
+
+<!ELEMENT answer (#PCDATA)>
+<!ATTLIST answer
+    correct CDATA #IMPLIED
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT text (#PCDATA)>
+
+

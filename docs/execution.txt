@@ -1,0 +1,3 @@
+java -jar exercises.jar
+* USER environment variable must be set - valid users are configured in src\data\users.list
+

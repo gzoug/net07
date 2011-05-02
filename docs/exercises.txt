@@ -1,0 +1,40 @@
+After adding new exercises in 'exercises' folder, you should invoke the QuestionBuilder 
+in order to create the proper 'xx-ids.xml' and 'xx-distribution.xml' files
+
+QuestionBuilder MUST NOT BE EXECUTED on exercises whose session has been activated and/or
+you have collected answers for them. Doing so, you will end up having different question 
+IDs generated - thus previous commited answers will be unlinked to their questions. 
+Check at the end of the document for more...
+
+##################################################################################
+On activated/past sessions, you should edit only the 'xx-ids.xml' file
+##################################################################################
+
+How To: 
+
+bin/net07-QuestionBuilder.bat exercises/01.xml
+
+This will build 01-ids.xml, 01-distribution.xml and 01-distribution.enc files into the same folder 01.xml exists.
+
+Then 
+1: Copy 01-distribution.xml (or .enc) into src/data folder (this is the questions file without the correct answer)
+2: Make appropriate changes to the src/data/configuration.xml file to include those files. Define DUE datetimes
+   If you have included .enc files, change the configuration.xml file, setting the apropriate 'encoded' attribute to TRUE
+3: Copy 01-ids.xml into src/org/exadmin/data folder - This will be needed for grading answers
+
+
+Changing the content of already distributed exercises
+-----------------------------------------------------
+
+Regenerations over the input files, will generated IDs only for questions having NO ID defined.
+Thus, after each regeneration of your questions, it is wise to replace the input xx.xml file with the generated xx-ids.xml 
+Then, when you need to correct an already distributed question you can modify ONLY the text or the correct answer and Regenerate. 
+
+[initial file] --> QuestionBuilder -> [xx-ids.xml]          --> copy over [initial file] .... [modified initial file] --> QuestionBuilder...
+                                      [xx-distributed.xml]
+                                      [xx-distributed.enc]
+
+
+
+Whenever there is a modofication in questions list, you should rebuild and redistribute the jar package!
+

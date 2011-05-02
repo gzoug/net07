@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <!DOCTYPE exercise SYSTEM "exercise.dtd"> -->
+<!-- 
+ For developers 
+ This is a BASIC  example/template of an exercise file 
+-->
+<exercise end="20070524 185800" id="0" mchoice="4" start="20070512 000000" version="$Rev: 202 $">
+    <description><![CDATA[1η σειρά ασκήσεων (2ο & 3ο κεφάλαιο)]]></description>
+    <!-- Chapter 2 -->
+    <question id="8343d7488303d7f9c11c34426cd71794">
+        <text>Τα βασικά στοιχεία ενός Δικτύου είναι τα:</text>
+        <answer id="0e8ae0b389f09132aaaab74bf17722f3">Πρωτόκολλο, Σταθμός, Μέσο μετάδοσης, Μήνυμα</answer>
+        <answer id="f4d44678625f56e15c9df4f2725bb110">Πρωτόκολλο, αξιοπιστία, Τοπικό Δίκτυο, Μητροπολιτικό Δίκτυο</answer>
+        <answer id="e6eb176e8a952d6a04984c0445221049">Μήνυμα, Τοπικό Δίκτυο, Ταχύτητα μετάδοσης, Αξιοπιστία Μετάδοσης</answer>
+        <answer id="8bcf83312cdbd4a526fac76736d2dea7">Πρωτόκολλο, Σταθμός, Μέσο μετάδοσης, Μήνυμα, Ταχύτητα Μετάδοσης, Αξιοπιστία, Ακρίβεια Παράδοσης</answer>
+    </question>
+    <question id="e7e60a95941ae206d486005f29b87231">
+        <text>Η απόδοση ενός δικτύου δεδομένων εξαρτάται από:</text>
+        <answer id="0bfaf5970f47263289448d0c87f51411">Ταχύτητα παράδοσης, αξιοπιστία, ακρίβεια παράδοσης</answer>
+        <answer id="5572ef54e1d0ee47158405377cfccedb">Πρωτόκολλα που χρησιμοποιούνται, σύγχρονη τεχνολογία, γρήγοροι εξυπηρετητές</answer>
+        <answer id="cec03e6a654fc26c623459fa9496eb5b">Τοπολογία δικτύου, τεχνολογία που χρησιμοποιείται</answer>
+    </question>
+    <question id="7ad9e12e45bc899c629b921b1ce66363">
+        <text>Ένα Μητροπολιτικό δίκτυο αποτελείται από πολλά δίκτυα ευρείας ζώνης</text>
+        <answer id="d4c52bf96e67d83239ed0f3dc2406482">Σωστό</answer>
+        <answer id="e5f9c3f67ac5cb9a2ce5b32c59056be9">Λάθος</answer>
+    </question>
+    <question id="1b8d8446c5f356a3d447e44cc4466ff3">
+        <text>Σε μία πόλη, πόσα ανεξάρτητα Μητροπολιτικά δίκτυα μπορούν να υπάρχουν;</text>
+        <answer id="24dad09a29219620fe96e40263cd716b">Δεν υπάρχει περιορισμός</answer>
+        <answer id="12bdfda12e930f9b0e2498fecf2b6e6f">Μόνο ένα</answer>
+        <answer id="b0043a8d696a96d9cd8684576d8060e2">Εξαρτάται από το πόσα LANs συνδέονται σε αυτά</answer>
+    </question>
+</exercise>

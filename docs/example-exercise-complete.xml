@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!-- <!DOCTYPE exercise SYSTEM "exercise.dtd"> -->
+<!-- 
+ For developers 
+ This is a COMPLETE  example/template of an exercise file 
+-->
+<exercise id="0" version="$Rev: 202 $" start="20070512 000000" end="20070524 185800" mchoice="4">
+    <description>Exercise Description, if neccessary</description>
+    <question id="q1" active="yes" difficulty="1" grade="1">
+        <text>Η μεγάλη ερώτηση</text>
+        <answer id="q1.1" correct="true">this</answer>
+        <answer id="q1.2">that</answer>
+        <answer id="q1.3">those</answer>
+    </question>
+    <question id="q2" active="yes" difficulty="1" grade="1">
+        <text>The great question</text>
+        <answer id="q2.1" correct="true">this</answer>
+        <answer id="q2.2">that</answer>
+        <answer id="q2.3">those</answer>
+    </question>
+    <question id="q3" active="yes" difficulty="1" grade="1">
+        <text>The great question</text>
+        <answer id="q3.1" correct="true">this</answer>
+        <answer id="q3.2">that</answer>
+        <answer id="q3.3">those</answer>
+    </question>
+    <question id="q4" active="yes" difficulty="1" grade="1">
+        <text>The great question</text>
+        <answer id="q4.1" correct="true">this</answer>
+        <answer id="q4.2">that</answer>
+        <answer id="q4.3">those</answer>
+    </question>
+    <question id="q5" active="yes" difficulty="1" grade="1">
+        <text>The great question</text>
+        <answer id="q5.1" correct="true">this</answer>
+        <answer id="q5.2">that</answer>
+        <answer id="q5.3">those</answer>
+    </question>
+</exercise>
