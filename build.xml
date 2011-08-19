@@ -1,76 +1,85 @@
-<?xml version="1.0"?>
-<project name="exercise" default="compile">
-    <property name="exercise.build.dir" value="build" />
-    
+<?xml version="1.0"?> <project name="exercise" default="compile">
+
+	<property name="exercise.build.dir" value="build" />
 	<property name="exercise.lib.dir" value="lib" />
-    <property name="exercise.src.dir" value="src" />
+	<property name="exercise.src.dir" value="src" />
 	<property name="exercise.doc.dir" value="doc" />
-    <property name="exercise.exercises.dir" value="exercises" /> <!-- future use -->
-    <property name="exercise.dist.dir" value="dist" />
-    <property name="exercise.finaldist.student.dir" value="/usr/dmst/networks" />
-    <property name="exercise.finaldist.admin.dir" value="/usr/dmst/networks/admin" />
+	<property name="exercise.exercises.dir" value="exercises" /> <!-- future use -->
+	<property name="exercise.dist.dir" value="dist" />
+	<property name="exercise.finaldist.student.dir" value="/usr/dmst/networks" />
+	<property name="exercise.finaldist.admin.dir" value="/usr/dmst/networks/admin" />
 	<property name="exercise.jar.admin" value="net07.jar" />
 	<property name="exercise.jar.student" value="exercises.jar" />
-	
 	<property name="exercise.debug.build" value="yes" />
-    
-    <path id="libraries">
+	<path id="libraries">
 		<fileset dir="lib">
-		    <include name="**/*.jar"/>
+			<include name="**/*.jar"/>
 		</fileset>
-    </path>
-    
-	
+	</path>
+
+	<!-- MAKE.JAR -->
 	<target name="make.jar"  description="Create the distribution package">
-	   <jar 
-		destfile="${exercise.dist.dir}/${exercise.jar.student}" 
-		basedir="${exercise.build.dir}" 
-		manifest="src/Manifest-student"
-	    excludes="**/exadmin/**"
-	   />
-	   <jar destfile="${exercise.dist.dir}/${exercise.jar.admin}" basedir="${exercise.build.dir}" manifest="src/Manifest-admin"/>
+		<jar destfile="${exercise.dist.dir}/${exercise.jar.student}"
+			basedir="${exercise.build.dir}"
+			manifest="src/Manifest-student"
+			excludes="**/exadmin/**"
+		/>
+		<jar destfile="${exercise.dist.dir}/${exercise.jar.admin}"
+			basedir="${exercise.build.dir}"
+			manifest="src/Manifest-admin"
+		/>
 	</target>
-	
+
+	<!-- DIST -->
 	<target name="dist" depends="compile" description="Copy the distribution package">
-	   <copy todir="${exercise.finaldist.student.dir}" flatten="false">
-	      <fileset dir="${exercise.dist.dir}">
-		     <include name="${exercise.jar.student}" />
-		  </fileset>
-	   </copy>
-	   <copy todir="${exercise.finaldist.admin.dir}" flatten="false">
-	      <fileset dir="${exercise.dist.dir}">
-		     <include name="${exercise.jar.admin}" />
-		  </fileset>
-	   </copy>
+		<copy todir="${exercise.finaldist.student.dir}" flatten="false">
+			<fileset dir="${exercise.dist.dir}">
+				<include name="${exercise.jar.student}" />
+			</fileset>
+		</copy>
+		<copy todir="${exercise.finaldist.admin.dir}" flatten="false">
+			<fileset dir="${exercise.dist.dir}">
+				<include name="${exercise.jar.admin}" />
+			</fileset>
+		</copy>
 	</target>
-	
-	
+
+	<!-- COMPILE -->
     <target name="compile" description="Compile the exercise">
-    	<mkdir dir="${exercise.build.dir}" />
+		<mkdir dir="${exercise.build.dir}" />
 		<mkdir dir="${exercise.dist.dir}" />
-    	<javac destdir="${exercise.build.dir}" srcdir="${exercise.src.dir}" debug="${exercise.debug.build}" debuglevel="lines,vars,source" source="1.5" target="1.5" encoding="8859_7"> <!-- debug="on"  -->
-		    <classpath>
+		<javac destdir="${exercise.build.dir}"
+				srcdir="${exercise.src.dir}"
+				debug="${exercise.debug.build}"
+				debuglevel="lines,vars,source"
+				source="1.5"
+				target="1.5"
+				encoding="8859_7"
+				includeantruntime="false"
+		>
+			<classpath>
 				<path refid="libraries"/>
-		    </classpath>
+			</classpath>
 		</javac>
-				
+
 		<copy todir="${exercise.build.dir}" flatten="false">
-		    <fileset dir="${exercise.src.dir}">
-			  <include name="data/**/*.xml" />
-			  <include name="data/**/*.enc" />
-              <include name="data/**/users.list" />
-              <include name="org/exadmin/data/**/*.xsl" />
-			  <include name="org/exadmin/data/**/*.xml" />
-		    </fileset>
+			<fileset dir="${exercise.src.dir}">
+				<include name="data/**/*.xml" />
+				<include name="data/**/*.enc" />
+				<include name="data/**/users.list" />
+				<include name="org/exadmin/data/**/*.xsl" />
+				<include name="org/exadmin/data/**/*.xml" />
+			</fileset>
 		</copy>
 
-
-	    <antcall target="make.jar"/>
+		<antcall target="make.jar"/>
     </target>
 
-    
+	<!-- CLEAN -->
     <target name="clean">
 		<delete dir="${exercise.build.dir}" />
 		<delete dir="${exercise.dist.dir}" />
     </target>
 </project>
+
+
